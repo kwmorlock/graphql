@@ -1,19 +1,20 @@
 {
-  "name": "graphql",
+  "name": "graphql-setup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kwmorlock/graphql.git"
+    "url": "git+https://github.com/kwmorlock/graphql-setup.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kwmorlock/graphql/issues"
+    "url": "https://github.com/kwmorlock/graphql-setup/issues"
   },
-  "homepage": "https://github.com/kwmorlock/graphql#readme"
+  "homepage": "https://github.com/kwmorlock/graphql-setup#readme"
 }
