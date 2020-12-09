@@ -1,5 +1,5 @@
 var express = require("express");
-var express_graphql = require("express-graphql");
+const { graphqlHTTP } = require("express-graphql"); //updated version, past versions in older tutorials will not work
 var { buildSchema } = require("graphql");
 
 // GraphQL Schema this describes the api type system,
@@ -28,11 +28,11 @@ var root = {
 var app = express();
 app.use(
   "/graphql",
-  express_graphql({
+  graphqlHTTP({
     schema: schema,
     rootValue: root,
     graphiql: true,
   })
-); //endpoint
+);
 
-app.listem(4000, () => console.log("Server now running!"));
+app.listen(4000, () => console.log("Server now running!"));
