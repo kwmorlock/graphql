@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kwmorlock/graphql-setup#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "graphql": "^15.4.0"
   }
 }
