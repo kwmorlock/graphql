@@ -14,3 +14,14 @@ var schema = buildSchema(`
         message: String
     }
 `);
+
+// resolver, attach a function that is called each time
+// a query from our schema needs to be executed, because
+// a client is requestint to execute the query
+
+// root resolver
+var root = {
+    message: () => 'Meow!'
+};
+
+
