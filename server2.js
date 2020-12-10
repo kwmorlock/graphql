@@ -11,7 +11,15 @@ var { buildSchema } = require("graphql");
 // otherwise an error is returned.
 var schema = buildSchema(`
     type Query {
-        message: String
+       
+    }
+    type Course {
+        id: Int
+        title: String
+        author: String
+        description: String
+        topic: String
+        url: String
     }
 `);
 
