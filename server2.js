@@ -9,8 +9,12 @@ var { buildSchema } = require("graphql");
 // call it is validated against that schema, and only if
 // validation is successful is the operation is executed
 // otherwise an error is returned.
+
+//[Course] is an array
 var schema = buildSchema(`
     type Query {
+        course(id: Int!): Course
+        courses(topic: String): [Course]
        
     }
     type Course {
