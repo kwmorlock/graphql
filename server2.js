@@ -59,8 +59,10 @@ var coursesData = [
 // a client is requestint to execute the query
 
 // root resolver
+//getCourse and getCourses are the functions
 var root = {
-  message: () => "Meow!",
+  course: getCourse,
+  courses: getCourses
 };
 
 // Create an express server and a GraphQL endpoint
