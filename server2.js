@@ -54,6 +54,13 @@ var coursesData = [
     }
 ]
 
+var gerCourse = function(args) {
+    return coursesData.filter(course =>{
+        return course.id == id;
+    })[0];
+}
+
+
 // resolver, attach a function that is called each time
 // a query from our schema needs to be executed, because
 // a client is requestint to execute the query
