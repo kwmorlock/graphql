@@ -18,7 +18,7 @@ var schema = buildSchema(`
        
     }
     type Mutation {
-        updateCourseTopic(id: Int!, course: String!): Course
+        updateCourseTopic(id: Int!, topic: String!): Course
     }
     type Course {
         id: Int
@@ -76,6 +76,16 @@ var getCourses = function (args) {
   }
 };
 
+var updateCourseTopic = function ({id, topic}) {
+    coursesData.map(course => {
+        if (course.id === id) {
+            course.topic = topic;
+            return course;
+        }
+    });
+    return coursesData.filter(course => course.id === id)[0]
+}
+
 // resolver, attach a function that is called each time
 // a query from our schema needs to be executed, because
 // a client is requestint to execute the query
@@ -85,6 +95,7 @@ var getCourses = function (args) {
 var root = {
   course: getCourse,
   courses: getCourses,
+  updateCourseTopic: updateCourseTopic
 };
 
 // Create an express server and a GraphQL endpoint
