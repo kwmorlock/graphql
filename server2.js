@@ -17,6 +17,9 @@ var schema = buildSchema(`
         courses(topic: String): [Course]
        
     }
+    type Mutation {
+        updateCourseTopic(id: Int!, course: String!): Course
+    }
     type Course {
         id: Int
         title: String
